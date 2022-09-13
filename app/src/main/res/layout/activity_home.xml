@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="130dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="100dp"
+        android:src="@mipmap/ic_launcher_round"
+        app:layout_constraintStart_toStartOf="@+id/btnDadosPessoais"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtNomeHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        tools:text="Nome do usuário" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="CPF:"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/txtNomeHome"
+        app:layout_constraintTop_toBottomOf="@+id/txtNomeHome" />
+
+    <TextView
+        android:id="@+id/txtCpfHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toTopOf="@+id/textView2"
+        tools:text="435.654.768-00" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Saldo: R$ "
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/txtSaldoDaContaHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/textView3"
+        app:layout_constraintTop_toTopOf="@+id/textView3"
+        tools:text="0,00"/>
+
+    <Button
+        android:id="@+id/btnEmprestimo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_row="1"
+        android:layout_column="0"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/background_button"
+        android:text="Emprestimo"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/btnPix"
+        app:layout_constraintStart_toStartOf="@+id/btnAlterarSenha"
+        app:layout_constraintTop_toBottomOf="@+id/btnAlterarSenha" />
+
+
+    <Button
+        android:id="@+id/btnPix"
+        android:layout_width="113dp"
+        android:layout_height="0dp"
+        android:layout_row="0"
+        android:layout_column="0"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/background_button"
+        android:text="Pix"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/btnAlterarSenha"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnAlterarSenha"
+        app:layout_constraintTop_toTopOf="@+id/btnDadosPessoais"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btnDadosPessoais"
+        android:layout_width="206dp"
+        android:layout_height="87dp"
+        android:layout_row="0"
+        android:layout_column="0"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/background_button"
+        android:text="Dados Pessoais"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/btnAlterarSenha"
+        app:layout_constraintStart_toStartOf="@+id/btnAlterarSenha"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <Button
+        android:id="@+id/btnAlterarSenha"
+        android:layout_width="202dp"
+        android:layout_height="88dp"
+        android:layout_row="0"
+        android:layout_column="0"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/background_button"
+        android:text="Alterar Senha"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnDadosPessoais" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

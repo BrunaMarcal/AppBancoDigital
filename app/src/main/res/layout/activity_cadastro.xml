@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightCyan"
+    tools:context=".CadastroActivity">
+
+    <TextView
+        android:id="@+id/txtNovoCadastro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="16dp"
+        android:text="Novo Cadastro"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtNome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="24dp"
+        android:text="Nome"
+        android:textColor="@color/darkGrey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtNovoCadastro" />
+
+    <EditText
+        android:id="@+id/edtNomeCadastro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/background_edit_text"
+        android:inputType="textPersonName"
+        android:maxLines="1"
+        android:textColor="@color/grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtNome" />
+
+    <TextView
+        android:id="@+id/txtSobrenome"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Sobrenome"
+        android:textColor="@color/darkGrey"
+        app:layout_constraintEnd_toEndOf="@+id/txtNome"
+        app:layout_constraintStart_toStartOf="@+id/txtNome"
+        app:layout_constraintTop_toBottomOf="@+id/edtNomeCadastro" />
+
+    <EditText
+        android:id="@+id/edtSobrenomeCadastro"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/background_edit_text"
+        android:inputType="textEmailAddress"
+        android:maxLines="1"
+        android:textColor="@color/grey"
+        app:layout_constraintEnd_toEndOf="@+id/edtNomeCadastro"
+        app:layout_constraintStart_toStartOf="@+id/edtNomeCadastro"
+        app:layout_constraintTop_toBottomOf="@+id/txtSobrenome" />
+
+    <TextView
+        android:id="@+id/txtCpf"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Cpf"
+        android:textColor="@color/darkGrey"
+        app:layout_constraintEnd_toEndOf="@+id/txtSobrenome"
+        app:layout_constraintStart_toStartOf="@+id/txtSobrenome"
+        app:layout_constraintTop_toBottomOf="@+id/edtSobrenomeCadastro" />
+
+    <EditText
+        android:id="@+id/edtCpfCadastro"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/background_edit_text"
+        android:inputType="textEmailAddress"
+        android:maxLines="1"
+        android:textColor="@color/grey"
+        app:layout_constraintEnd_toEndOf="@+id/edtSobrenomeCadastro"
+        app:layout_constraintStart_toStartOf="@+id/edtSobrenomeCadastro"
+        app:layout_constraintTop_toBottomOf="@+id/txtCpf" />
+
+    <TextView
+        android:id="@+id/txtSenha"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Senha"
+        android:textColor="@color/darkGrey"
+        app:layout_constraintEnd_toEndOf="@+id/txtCpf"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/txtCpf"
+        app:layout_constraintTop_toBottomOf="@+id/edtCpfCadastro" />
+
+    <EditText
+        android:id="@+id/edtSenhaCadastro"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/background_edit_text"
+        android:inputType="textPassword"
+        android:maxLines="1"
+        android:textColor="@color/grey"
+        app:layout_constraintEnd_toEndOf="@+id/edtCpfCadastro"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/edtCpfCadastro"
+        app:layout_constraintTop_toBottomOf="@+id/txtSenha" />
+
+    <TextView
+        android:id="@+id/txtConfirmacaoSenha"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Confirmação de senha"
+        android:textColor="@color/darkGrey"
+        app:layout_constraintEnd_toEndOf="@+id/txtSenha"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/txtSenha"
+        app:layout_constraintTop_toBottomOf="@+id/edtSenhaCadastro" />
+
+    <EditText
+        android:id="@+id/edtConfirmacaoSenhaCadastro"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/background_edit_text"
+        android:inputType="textPassword"
+        android:maxLines="1"
+        android:textColor="@color/grey"
+        app:layout_constraintEnd_toEndOf="@+id/edtSenhaCadastro"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/edtSenhaCadastro"
+        app:layout_constraintTop_toBottomOf="@+id/txtConfirmacaoSenha" />
+
+    <Button
+        android:id="@+id/btnSalvarCadastro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="70dp"
+        android:background="@drawable/background_button_salvar"
+        android:text="Salvar"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtConfirmacaoSenhaCadastro" />
+
+    <Button
+        android:id="@+id/btnCancelarCadastro"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/background_button_cancelar"
+        android:text="Cancelar"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/btnSalvarCadastro"
+        app:layout_constraintStart_toStartOf="@+id/btnSalvarCadastro"
+        app:layout_constraintTop_toBottomOf="@+id/btnSalvarCadastro" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

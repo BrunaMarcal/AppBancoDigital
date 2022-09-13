@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightCyan"
+    tools:context=".AlteracaoSenhaActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="16dp"
+        android:text="Alterar Senha"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtSenhaAntiga"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"
+        android:text="Senha Antiga"
+        android:textColor="@color/darkGrey"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/edtSenhaAntiga"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/background_edit_text"
+        android:inputType="textPassword"
+        android:maxLines="1"
+        android:textColor="@color/grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtSenhaAntiga" />
+
+    <TextView
+        android:id="@+id/txtSenhaNova"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Nova Senha"
+        android:textColor="@color/darkGrey"
+        app:layout_constraintEnd_toEndOf="@+id/txtSenhaAntiga"
+        app:layout_constraintStart_toStartOf="@+id/txtSenhaAntiga"
+        app:layout_constraintTop_toBottomOf="@+id/edtSenhaAntiga" />
+
+    <EditText
+        android:id="@+id/edtSenhaNova"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/background_edit_text"
+        android:inputType="textPassword"
+        android:maxLines="1"
+        android:textColor="@color/grey"
+        app:layout_constraintEnd_toEndOf="@+id/edtSenhaAntiga"
+        app:layout_constraintStart_toStartOf="@+id/edtSenhaAntiga"
+        app:layout_constraintTop_toBottomOf="@+id/txtSenhaNova" />
+
+    <Button
+        android:id="@+id/btnSalvarAlteracaoSenha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="70dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/background_button_salvar"
+        android:text="Salvar"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btnCancelarAlteracaoSenha"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnCancelarAlteracaoSenha"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="80dp"
+        android:background="@drawable/background_button_cancelar"
+        android:text="Cancelar"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btnSalvarAlteracaoSenha"
+        app:layout_constraintStart_toStartOf="@+id/btnSalvarAlteracaoSenha" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
