@@ -4,7 +4,6 @@
     package="com.example.bancofake">
 
     <application
-        android:usesCleartextTraffic="true"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -13,9 +12,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.BancoFake"
+        android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".LoginActivity"
+            android:name=".ui.PixValorActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.PixActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,11 +29,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".AlteracaoSenhaActivity"
+        <activity
+            android:name=".ui.AlteracaoSenhaActivity"
             android:exported="false" />
-        <activity android:name=".HomeActivity"
+        <activity
+            android:name=".ui.HomeActivity"
             android:exported="false" />
-        <activity android:name=".CadastroActivity"
+        <activity
+            android:name=".ui.CadastroActivity"
             android:exported="false" />
     </application>
 

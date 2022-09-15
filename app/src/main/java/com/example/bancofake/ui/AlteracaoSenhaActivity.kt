@@ -1,10 +1,9 @@
-package com.example.bancofake
+package com.example.bancofake.ui
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.bancofake.databinding.ActivityAlteracaoSenhaBinding
-import com.example.bancofake.databinding.ActivityHomeBinding
 
 class AlteracaoSenhaActivity : AppCompatActivity() {
 
