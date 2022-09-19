@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/lightCyan"
-    tools:context=".ui.CadastroActivity">
+    tools:context=".ui.activity.cadastro.CadastroActivity">
 
     <TextView
         android:id="@+id/txtNovoCadastro"
@@ -154,7 +154,7 @@
         app:layout_constraintTop_toBottomOf="@+id/txtConfirmacaoSenha" />
 
     <Button
-        android:id="@+id/btnAvancarPix"
+        android:id="@+id/btnSalvarNovoCadastro"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="70dp"
@@ -178,9 +178,9 @@
         android:text="Cancelar"
         android:textColor="@color/black"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/btnAvancarPix"
-        app:layout_constraintStart_toStartOf="@+id/btnAvancarPix"
-        app:layout_constraintTop_toBottomOf="@+id/btnAvancarPix" />
+        app:layout_constraintEnd_toEndOf="@+id/btnSalvarNovoCadastro"
+        app:layout_constraintStart_toStartOf="@+id/btnSalvarNovoCadastro"
+        app:layout_constraintTop_toBottomOf="@+id/btnSalvarNovoCadastro" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

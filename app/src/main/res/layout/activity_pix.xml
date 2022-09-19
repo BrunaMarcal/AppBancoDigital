@@ -31,27 +31,28 @@
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/imbEmailPix"
         android:layout_width="100dp"
         android:layout_height="107dp"
         android:layout_marginStart="60dp"
         android:layout_marginTop="56dp"
-        android:background="transparent"
+        android:background="@color/transparent"
         android:src="@drawable/ic_baseline_mail_outline_24"
         app:layout_constraintStart_toStartOf="@+id/textView5"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
     <ImageButton
+        android:id="@+id/imbTelefonePix"
         android:layout_width="0dp"
         android:layout_height="107dp"
         android:layout_marginStart="20dp"
-        android:background="transparent"
+        android:background="@color/transparent"
         android:src="@drawable/ic_baseline_call_24"
-        app:layout_constraintStart_toEndOf="@+id/imageButton"
-        app:layout_constraintTop_toTopOf="@+id/imageButton" />
+        app:layout_constraintStart_toEndOf="@+id/imbEmailPix"
+        app:layout_constraintTop_toTopOf="@+id/imbEmailPix" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/edtEmailTelefone"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -63,7 +64,7 @@
         android:textColor="@color/darkGrey"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton" />
+        app:layout_constraintTop_toBottomOf="@+id/imbEmailPix" />
 
     <Button
         android:id="@+id/btnAvancarPix"
