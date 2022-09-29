@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.DadosPessoaisActivity">
+    tools:context=".ui.activity.dados_pessoais.DadosPessoaisActivity">
 
     <TextView
         android:id="@+id/textView8"
@@ -91,7 +91,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="CPF"
+        android:text="CPF:"
         android:textSize="18sp"
         android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="@+id/textView7"

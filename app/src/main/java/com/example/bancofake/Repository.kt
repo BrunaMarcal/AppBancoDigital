@@ -19,5 +19,10 @@ class Repository (context: Context) {
     fun getUsuario (cpf: String, senha: String): LiveData<Usuario> =
         usuarioDao.selecionarUsuario(cpf, senha)
 
+    fun updateSenha(id: Long, senha: String) {
+        usuarioDao.updateSenha(id, senha)
+    }
+
     fun getUsuarioId(id: Long): LiveData<Usuario> = usuarioDao.selecionarId(id)
+
 }

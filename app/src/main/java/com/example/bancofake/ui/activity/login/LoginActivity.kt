@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.widget.Toast
 import com.example.bancofake.Repository
 import com.example.bancofake.databinding.ActivityLoginBinding
-import com.example.bancofake.ui.home.HomeActivity
+import com.example.bancofake.ui.activity.home.HomeActivity
 import com.example.bancofake.ui.activity.cadastro.CadastroActivity
 import com.example.bancofake.ui.activity.login.viewmodel.LoginViewModel
 import com.example.bancofake.util.SharedPreference

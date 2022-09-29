@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/lightCyan"
-    tools:context=".ui.AlteracaoSenhaActivity">
+    tools:context=".ui.activity.alteracao_senha.AlteracaoSenhaActivity">
 
     <TextView
         android:id="@+id/textView"
@@ -25,18 +25,18 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/txtSenhaAntiga"
+        android:id="@+id/txtSenhaAtual"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="50dp"
-        android:text="Senha Antiga"
+        android:text="Senha Atual"
         android:textColor="@color/darkGrey"
         app:layout_constraintStart_toStartOf="@+id/textView"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <EditText
-        android:id="@+id/edtSenhaAntiga"
+        android:id="@+id/edtSenhaAtual"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -48,7 +48,7 @@
         android:textColor="@color/grey"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtSenhaAntiga" />
+        app:layout_constraintTop_toBottomOf="@+id/txtSenhaAtual" />
 
     <TextView
         android:id="@+id/txtSenhaNova"
@@ -57,9 +57,9 @@
         android:layout_marginTop="10dp"
         android:text="Nova Senha"
         android:textColor="@color/darkGrey"
-        app:layout_constraintEnd_toEndOf="@+id/txtSenhaAntiga"
-        app:layout_constraintStart_toStartOf="@+id/txtSenhaAntiga"
-        app:layout_constraintTop_toBottomOf="@+id/edtSenhaAntiga" />
+        app:layout_constraintEnd_toEndOf="@+id/txtSenhaAtual"
+        app:layout_constraintStart_toStartOf="@+id/txtSenhaAtual"
+        app:layout_constraintTop_toBottomOf="@+id/edtSenhaAtual" />
 
     <EditText
         android:id="@+id/edtSenhaNova"
@@ -70,8 +70,8 @@
         android:inputType="textPassword"
         android:maxLines="1"
         android:textColor="@color/grey"
-        app:layout_constraintEnd_toEndOf="@+id/edtSenhaAntiga"
-        app:layout_constraintStart_toStartOf="@+id/edtSenhaAntiga"
+        app:layout_constraintEnd_toEndOf="@+id/edtSenhaAtual"
+        app:layout_constraintStart_toStartOf="@+id/edtSenhaAtual"
         app:layout_constraintTop_toBottomOf="@+id/txtSenhaNova" />
 
     <Button

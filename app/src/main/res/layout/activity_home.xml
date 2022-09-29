@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/lightCyan"
-    tools:context=".ui.home.HomeActivity">
+    tools:context=".ui.activity.home.HomeActivity">
 
 
     <ImageView
@@ -23,12 +23,25 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
+        android:inputType="textPersonName"
         android:textColor="@color/black"
         android:textStyle="bold"
-        android:inputType="textPersonName"
         app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="@+id/imageView"
-        tools:text="Nome do usuário" />
+        tools:text="Nome" />
+
+
+    <TextView
+        android:id="@+id/txtSobrenomeHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:inputType="textPersonName"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/txtNomeHome"
+        app:layout_constraintTop_toTopOf="@+id/txtNomeHome"
+        tools:text="Sobrenome" />
 
     <TextView
         android:id="@+id/textView2"

@@ -6,7 +6,7 @@ import android.widget.Toast
 import com.example.bancofake.Repository
 import com.example.bancofake.database.Usuario
 import com.example.bancofake.databinding.ActivityCadastroBinding
-import com.example.bancofake.ui.home.HomeActivity
+import com.example.bancofake.ui.activity.home.HomeActivity
 import com.example.bancofake.ui.activity.cadastro.viewmodel.CadastroViewModel
 import com.example.bancofake.ui.activity.login.LoginActivity
 import kotlinx.android.synthetic.main.activity_cadastro.*
@@ -19,12 +19,11 @@ class CadastroActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        binding = ActivityCadastroBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         val repository = Repository(this)
         viewModel = CadastroViewModel.CadastroViewModelProviderFactory(application, repository, Dispatchers.IO).create(CadastroViewModel::class.java)
-
-        binding = ActivityCadastroBinding.inflate(layoutInflater)
-        setContentView(binding.root)
 
         binding.btnSalvarNovoCadastro.setOnClickListener {
             inserirUsuario()
@@ -55,7 +54,8 @@ class CadastroActivity : AppCompatActivity() {
                         "Preencha todos os campos",
                         Toast.LENGTH_SHORT
                     ).show()
-                    2 -> Toast.makeText(this@CadastroActivity, "Preencha o cpf", Toast.LENGTH_SHORT)
+                    2 -> Toast.makeText(this@CadastroActivity,
+                        "Preencha o cpf", Toast.LENGTH_SHORT)
                         .show()
                     3 -> Toast.makeText(
                         this@CadastroActivity,
@@ -72,7 +72,7 @@ class CadastroActivity : AppCompatActivity() {
     private fun inserirUsuario() {
         viewModel.inserirUsuario(Usuario(edtNomeCadastro.text.toString(), edtSobrenomeCadastro.text.toString(), edtCpfCadastro.text.toString(), edtSenhaCadastro.text.toString()))
         Toast.makeText(this@CadastroActivity, "Cadastro efetuado com sucesso", Toast.LENGTH_SHORT).show()
-        startActivity(Intent(this@CadastroActivity, HomeActivity::class.java))
+//        startActivity(Intent(this@CadastroActivity, HomeActivity::class.java))
         finish()
     }
 }

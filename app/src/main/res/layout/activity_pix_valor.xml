@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/lightCyan"
-    tools:context=".ui.PixValorActivity">
+    tools:context=".ui.activity.pix_valor.PixValorActivity">
 
     <TextView
         android:id="@+id/textView4"
@@ -54,7 +54,7 @@
         tools:text="0,00" />
 
     <EditText
-        android:id="@+id/edtEmailTelefone"
+        android:id="@+id/edtValorPix"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -63,6 +63,7 @@
         android:background="@drawable/background_edit_text"
         android:hint="informe o valor R$"
         android:inputType="numberDecimal"
+        android:maxLines="1"
         android:textAlignment="center"
         android:textColor="@color/darkGrey"
         app:layout_constraintEnd_toEndOf="parent"

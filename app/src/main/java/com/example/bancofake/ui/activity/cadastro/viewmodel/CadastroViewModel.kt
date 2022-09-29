@@ -29,7 +29,7 @@ class CadastroViewModel (application: Application, private val repository: Repos
     ): Int {
         return if (TextUtils.isEmpty(edtRegisterName.text.toString())) {
             return 0
-        } else if (TextUtils.isEmpty(edtSobrenome.text.toString()) && TextUtils.isEmpty(edtSobrenome.text.toString())) {
+        } else if (TextUtils.isEmpty(edtSobrenome.text.toString())) {
             return 1
         } else if (TextUtils.isEmpty(edtCpf.text.toString())) {
             return 2

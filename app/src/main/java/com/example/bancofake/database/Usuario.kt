@@ -4,6 +4,7 @@ import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import java.io.Serializable
+import java.math.BigDecimal
 
 @Entity(tableName = "usuario")
 data class Usuario(
@@ -15,9 +16,11 @@ data class Usuario(
     @ColumnInfo(name = "cpf")
     val cpf: String,
     @ColumnInfo(name = "senha")
-    val senha: String
+    var senha: String,
+    @ColumnInfo(name = "saldo")
+    var saldo: Double = 100.0
 
-): Serializable {
+) : Serializable {
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "id")
     var id: Long = 0

@@ -14,4 +14,7 @@ interface UsuarioDao {
 
     @Query("SELECT * FROM usuario WHERE id = :id")
     fun selecionarId(id: Long): LiveData<Usuario>
+
+    @Query("UPDATE usuario SET senha = :senha WHERE id = :id")
+    fun updateSenha (id: Long, senha: String)
 }

@@ -7,16 +7,23 @@
         <entry key="app/src/main/res/drawable/background_button_cancelar.xml" value="0.1795" />
         <entry key="app/src/main/res/drawable/background_button_salvar.xml" value="0.1795" />
         <entry key="app/src/main/res/drawable/background_edit_text.xml" value="0.1795" />
+        <entry key="app/src/main/res/drawable/background_img_button_click_email.xml" value="0.1795" />
+        <entry key="app/src/main/res/drawable/background_img_button_click_phone.xml" value="0.1735" />
+        <entry key="app/src/main/res/drawable/background_img_button_selector.xml" value="0.1795" />
         <entry key="app/src/main/res/drawable/edittext.xml" value="0.1795" />
         <entry key="app/src/main/res/drawable/ic_baseline_call_24.xml" value="0.1795" />
+        <entry key="app/src/main/res/drawable/ic_baseline_call_click.xml" value="0.1795" />
+        <entry key="app/src/main/res/drawable/ic_baseline_email_click.xml" value="0.1795" />
         <entry key="app/src/main/res/drawable/ic_baseline_mail_outline_24.xml" value="0.1795" />
         <entry key="app/src/main/res/layout/activity_alteracao_senha.xml" value="0.22126922607421878" />
-        <entry key="app/src/main/res/layout/activity_cadastro.xml" value="0.1347517730496454" />
+        <entry key="app/src/main/res/layout/activity_cadastro.xml" value="0.2671249389648438" />
         <entry key="app/src/main/res/layout/activity_dados_pessoais.xml" value="0.3098116667374318" />
-        <entry key="app/src/main/res/layout/activity_home.xml" value="0.20332340848618663" />
-        <entry key="app/src/main/res/layout/activity_login.xml" value="0.22178988326848248" />
-        <entry key="app/src/main/res/layout/activity_pix.xml" value="0.17963867187500002" />
+        <entry key="app/src/main/res/layout/activity_home.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.25042452682316985" />
+        <entry key="app/src/main/res/layout/activity_pix.xml" value="0.32707519531249996" />
         <entry key="app/src/main/res/layout/activity_pix_valor.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/custom_dialog_igual.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/custom_dialog_menor.xml" value="0.14" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1795" />
         <entry key="validacaosenha/src/main/res/drawable-v24/background_edit_text_validacao.xml" value="0.1795" />
         <entry key="validacaosenha/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1795" />
@@ -39,5 +46,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.22178988326848248" />
+      </ProjectState>
+    </option>
   </component>
 </project>

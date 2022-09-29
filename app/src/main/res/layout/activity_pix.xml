@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/lightCyan"
-    tools:context=".ui.PixActivity">
+    tools:context=".ui.activity.pix.PixActivity">
 
     <TextView
         android:id="@+id/textView4"
@@ -31,40 +31,60 @@
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
     <ImageButton
-        android:id="@+id/imbEmailPix"
+        android:id="@+id/imgEmailPix"
         android:layout_width="100dp"
         android:layout_height="107dp"
+        android:layout_alignParentBottom="true"
         android:layout_marginStart="60dp"
         android:layout_marginTop="56dp"
         android:background="@color/transparent"
-        android:src="@drawable/ic_baseline_mail_outline_24"
+        android:src="@drawable/background_img_button_click_email"
         app:layout_constraintStart_toStartOf="@+id/textView5"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
     <ImageButton
-        android:id="@+id/imbTelefonePix"
-        android:layout_width="0dp"
+        android:id="@+id/imgTelefonePix"
+        android:layout_width="100dp"
         android:layout_height="107dp"
         android:layout_marginStart="20dp"
         android:background="@color/transparent"
-        android:src="@drawable/ic_baseline_call_24"
-        app:layout_constraintStart_toEndOf="@+id/imbEmailPix"
-        app:layout_constraintTop_toTopOf="@+id/imbEmailPix" />
+        android:src="@drawable/background_img_button_click_phone"
+        app:layout_constraintStart_toEndOf="@+id/imgEmailPix"
+        app:layout_constraintTop_toTopOf="@+id/imgEmailPix" />
 
     <EditText
-        android:id="@+id/edtEmailTelefone"
+        android:id="@+id/edtEmail"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="70dp"
         android:background="@drawable/background_edit_text"
-        android:hint="inserir telefone ou e-mail"
+        android:hint="insira seu e-mail"
+        android:inputType="textEmailAddress"
+        android:maxLines="1"
         android:textAlignment="center"
         android:textColor="@color/darkGrey"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imbEmailPix" />
+        app:layout_constraintTop_toBottomOf="@+id/imgEmailPix" />
+
+    <EditText
+        android:id="@+id/edtTelefone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_edit_text"
+        android:hint="insira seu telefone"
+        android:inputType="phone"
+        android:maxLines="1"
+        android:textAlignment="center"
+        android:textColor="@color/darkGrey"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/edtEmail"
+        app:layout_constraintStart_toStartOf="@+id/edtEmail"
+        app:layout_constraintTop_toTopOf="@+id/edtEmail" />
 
     <Button
         android:id="@+id/btnAvancarPix"
