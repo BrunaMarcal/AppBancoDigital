@@ -9,6 +9,8 @@ import com.example.bancofake.databinding.ActivityCadastroBinding
 import com.example.bancofake.ui.activity.home.HomeActivity
 import com.example.bancofake.ui.activity.cadastro.viewmodel.CadastroViewModel
 import com.example.bancofake.ui.activity.login.LoginActivity
+import com.example.validacaosenha.ValidaSenhaActivity
+import com.example.validacaosenha.ValidaSmsActivity
 import kotlinx.android.synthetic.main.activity_cadastro.*
 import kotlinx.coroutines.Dispatchers
 
@@ -33,7 +35,6 @@ class CadastroActivity : AppCompatActivity() {
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
         }
-
         cadastro()
     }
         fun cadastro() {
@@ -42,7 +43,8 @@ class CadastroActivity : AppCompatActivity() {
                     edtNomeCadastro,
                     edtSobrenomeCadastro,
                     edtCpfCadastro,
-                    edtSenhaCadastro
+                    edtSenhaCadastro,
+                    edtConfirmacaoSenhaCadastro
                 )) {
                     0 -> Toast.makeText(
                         this@CadastroActivity,
@@ -62,6 +64,16 @@ class CadastroActivity : AppCompatActivity() {
                         "Preencha a senha",
                         Toast.LENGTH_SHORT
                     ).show()
+                    4 -> Toast.makeText(
+                        this@CadastroActivity,
+                        "A senha digitada não corresponde a sua senha.",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                    5 -> Toast.makeText(
+                        this@CadastroActivity,
+                        "Preencha a confirmação de senha",
+                        Toast.LENGTH_SHORT
+                    ).show()
                     else -> {
                         inserirUsuario()
                     }
@@ -71,8 +83,16 @@ class CadastroActivity : AppCompatActivity() {
 
     private fun inserirUsuario() {
         viewModel.inserirUsuario(Usuario(edtNomeCadastro.text.toString(), edtSobrenomeCadastro.text.toString(), edtCpfCadastro.text.toString(), edtSenhaCadastro.text.toString()))
-        Toast.makeText(this@CadastroActivity, "Cadastro efetuado com sucesso", Toast.LENGTH_SHORT).show()
-//        startActivity(Intent(this@CadastroActivity, HomeActivity::class.java))
-        finish()
+        telaRandomica()
+    }
+
+    fun telaRandomica () {
+        val numero = (0..1).random()
+
+        if (numero == 0) {
+            startActivity(Intent(this, ValidaSenhaActivity::class.java))
+        } else if (numero == 1) {
+            startActivity(Intent(this, ValidaSmsActivity::class.java))
+        }
     }
 }

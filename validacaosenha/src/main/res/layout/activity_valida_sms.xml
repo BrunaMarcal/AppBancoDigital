@@ -43,29 +43,17 @@
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <EditText
-        android:id="@+id/editText"
-        android:layout_width="68dp"
-        android:layout_height="81dp"
-        android:layout_row="0"
-        android:layout_column="0"
-        android:background="@drawable/background_edit_text_validacao"
-        android:textAlignment="center"
-        android:textSize="40sp"
-        app:layout_constraintEnd_toEndOf="@+id/textView2"
-        app:layout_constraintTop_toTopOf="@+id/editText3"
-        tools:text="0" />
-
-    <EditText
         android:id="@+id/editText3"
         android:layout_width="68dp"
         android:layout_height="81dp"
         android:layout_row="0"
-        android:layout_column="1"
+        android:layout_column="0"
+        android:maxLength="1"
+        android:gravity="center"
+        android:maxLines="1"
         android:background="@drawable/background_edit_text_validacao"
-        android:textAlignment="center"
         android:textSize="40sp"
-        app:layout_constraintEnd_toStartOf="@+id/editText"
-        app:layout_constraintStart_toEndOf="@+id/editText2"
+        app:layout_constraintEnd_toEndOf="@+id/textView2"
         app:layout_constraintTop_toTopOf="@+id/editText2"
         tools:text="0" />
 
@@ -74,10 +62,28 @@
         android:layout_width="68dp"
         android:layout_height="81dp"
         android:layout_row="0"
+        android:layout_column="1"
+        android:maxLength="1"
+        android:gravity="center"
+        android:maxLines="1"
+        android:background="@drawable/background_edit_text_validacao"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toStartOf="@+id/editText3"
+        app:layout_constraintStart_toEndOf="@+id/editText1"
+        app:layout_constraintTop_toTopOf="@+id/editText1"
+        tools:text="0" />
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="68dp"
+        android:layout_height="81dp"
+        android:layout_row="0"
         android:layout_column="2"
         android:layout_marginTop="40dp"
         android:background="@drawable/background_edit_text_validacao"
-        android:textAlignment="center"
+        android:maxLength="1"
+        android:gravity="center"
+        android:maxLines="1"
         android:textSize="40sp"
         app:layout_constraintStart_toStartOf="@+id/textView2"
         app:layout_constraintTop_toBottomOf="@+id/textView2"

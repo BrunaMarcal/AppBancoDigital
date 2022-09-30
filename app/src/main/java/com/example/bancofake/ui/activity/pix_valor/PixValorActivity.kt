@@ -7,7 +7,7 @@ import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
-import android.widget.EditText
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.bancofake.R
 import com.example.bancofake.Repository
@@ -17,9 +17,12 @@ import com.example.bancofake.ui.activity.home.HomeActivity
 import com.example.bancofake.ui.activity.pix_valor.viewmodel.PixValorViewModel
 import com.example.bancofake.util.SharedPreference
 import com.example.validacaosenha.ValidaSenhaActivity
-import kotlinx.android.synthetic.main.activity_pix.*
+import com.example.validacaosenha.ValidaSmsActivity
+import com.example.validacaosenha.ValidacaoSenhaImpl
 import kotlinx.android.synthetic.main.activity_pix_valor.*
 import kotlinx.coroutines.Dispatchers
+import kotlin.random.Random
+import kotlin.random.nextInt
 
 
 class PixValorActivity : AppCompatActivity() {
@@ -68,11 +71,11 @@ class PixValorActivity : AppCompatActivity() {
             val resultadoPix = valorCaixa - inputValorPix
             valorCaixa = resultadoPix
             sUsuario.saldo = valorCaixa
-        } else if (inputValorPix in 1.0..100.0) {
+        } else if (inputValorPix in 1.0..101.0) {
             val resultadoPix = valorCaixa - inputValorPix
             valorCaixa = resultadoPix
             sUsuario.saldo = valorCaixa
-            startActivity(Intent(this@PixValorActivity, ValidaSenhaActivity::class.java))
+            telaRandomica()
         }
     }
 
@@ -88,6 +91,19 @@ class PixValorActivity : AppCompatActivity() {
         alert = builder.create()
         alert.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
         alert.show()
+    }
+
+    fun telaRandomica () {
+       ValidacaoSenhaImpl().callValidacaoSenha(this, ::success, ::error)
+    }
+
+    fun success(){
+        val intent = Intent(this, HomeActivity::class.java)
+        startActivity(intent)
+    }
+
+    fun error(){
+        Toast.makeText(this, "Erro",Toast.LENGTH_SHORT).show()
     }
 }
 

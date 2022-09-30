@@ -12,6 +12,8 @@ import com.example.bancofake.ui.activity.home.HomeActivity
 import com.example.bancofake.ui.activity.home.viewmodel.HomeViewModel
 import com.example.bancofake.ui.activity.login.LoginActivity
 import com.example.bancofake.util.SharedPreference
+import com.example.validacaosenha.ValidaSenhaActivity
+import com.example.validacaosenha.ValidaSmsActivity
 import kotlinx.android.synthetic.main.activity_alteracao_senha.*
 import kotlinx.android.synthetic.main.activity_home.*
 import kotlinx.coroutines.Dispatchers
@@ -51,6 +53,7 @@ class AlteracaoSenhaActivity : AppCompatActivity() {
 
         btnSalvarAlteracaoSenha.setOnClickListener {
             validaSenha()
+            telaRandomica ()
         }
     }
 
@@ -81,32 +84,17 @@ class AlteracaoSenhaActivity : AppCompatActivity() {
             if (getUsuarioId != 0L) updateSenha(getUsuarioId)
         }
     }
-}
 
-//    fun validacaoSenha() {
-//        btnSalvarAlteracaoSenha.setOnClickListener {
-//            when (viewModel.senhavalida(edtSenhaAtual, edtSenhaNova, mUser.senha)) {
-//                0 -> Toast.makeText(
-//                    this@AlteracaoSenhaActivity,
-//                    "A senha atual nao pode ficar vazia", Toast.LENGTH_SHORT
-//                ).show()
-//                1 -> Toast.makeText(
-//                    this@AlteracaoSenhaActivity,
-//                    "Preencha todos os campos", Toast.LENGTH_SHORT
-//                ).show()
-//                2 -> Toast.makeText(
-//                    this@AlteracaoSenhaActivity,
-//                    "A nova senha nao pode ficar vazia", Toast.LENGTH_SHORT
-//                ).show()
-//                3 -> Toast.makeText(
-//                    this@AlteracaoSenhaActivity,
-//                    "Senha inválida", Toast.LENGTH_SHORT
-//                ).show()
-//                else -> {
-//                }
-//            }
-//        }
-//    }
+    fun telaRandomica () {
+        val numero = (0..1).random()
+
+        if (numero == 0) {
+            startActivity(Intent(this, ValidaSenhaActivity::class.java))
+        } else if (numero == 1) {
+            startActivity(Intent(this, ValidaSmsActivity::class.java))
+        }
+    }
+}
 
 
 

@@ -32,9 +32,10 @@
         <entry key="validacaosenha/src/main/res/drawable/ic_come_back.xml" value="0.1795" />
         <entry key="validacaosenha/src/main/res/drawable/ic_launcher_background.xml" value="0.1795" />
         <entry key="validacaosenha/src/main/res/drawable/ic_outline_close_24.xml" value="0.1795" />
+        <entry key="validacaosenha/src/main/res/layout-v26/activity_valida_senha.xml" value="0.19895833333333332" />
         <entry key="validacaosenha/src/main/res/layout/activity_codigo_invalido.xml" value="0.19564235521399453" />
         <entry key="validacaosenha/src/main/res/layout/activity_invalido.xml" value="0.3855109994269941" />
-        <entry key="validacaosenha/src/main/res/layout/activity_valida_senha.xml" value="0.16193542480468762" />
+        <entry key="validacaosenha/src/main/res/layout/activity_valida_senha.xml" value="0.24540557861328136" />
         <entry key="validacaosenha/src/main/res/layout/activity_valida_sms.xml" value="0.14175724637681159" />
         <entry key="validacaosenha/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1795" />
         <entry key="validacaosenha/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1795" />

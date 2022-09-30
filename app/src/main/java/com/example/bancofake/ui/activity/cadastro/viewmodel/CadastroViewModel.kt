@@ -21,12 +21,7 @@ class CadastroViewModel (application: Application, private val repository: Repos
         repository.inserirUsuario(usuario)
     }
 
-    fun cadastroValido(
-        edtRegisterName: EditText,
-        edtSobrenome: EditText,
-        edtCpf: EditText,
-        edtSenha: EditText
-    ): Int {
+    fun cadastroValido(edtRegisterName: EditText, edtSobrenome: EditText, edtCpf: EditText, edtSenha: EditText, edtConfirmacaoSenha: EditText): Int {
         return if (TextUtils.isEmpty(edtRegisterName.text.toString())) {
             return 0
         } else if (TextUtils.isEmpty(edtSobrenome.text.toString())) {
@@ -35,6 +30,10 @@ class CadastroViewModel (application: Application, private val repository: Repos
             return 2
         } else if (TextUtils.isEmpty(edtSenha.text.toString())) {
             return 3
+        }else if (edtConfirmacaoSenha.text.toString() != edtSenha.text.toString()) {
+            return 4
+        } else if (TextUtils.isEmpty(edtConfirmacaoSenha.text.toString())) {
+            return 5
         } else -1
     }
 
