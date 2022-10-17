@@ -25,4 +25,8 @@ class Repository (context: Context) {
 
     fun getUsuarioId(id: Long): LiveData<Usuario> = usuarioDao.selecionarId(id)
 
+    fun getUsuarioById(id: Long): Usuario = usuarioDao.selecionarById(id)
+
+
+
 }

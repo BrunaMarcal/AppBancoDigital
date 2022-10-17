@@ -2,21 +2,34 @@ package com.example.bancofake.ui.activity.alteracao_senha.viewmodel
 
 import android.app.Application
 import android.text.TextUtils
-import android.util.Patterns
 import android.widget.EditText
 import androidx.lifecycle.*
 import com.example.bancofake.Repository
 import com.example.bancofake.database.Usuario
-import com.example.bancofake.ui.activity.home.viewmodel.HomeViewModel
+import com.example.bancofake.ui.activity.alteracao_senha.AlteracaoSenhaException
 import kotlinx.coroutines.CoroutineDispatcher
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 class AlteracaoSenhaViewModel (application: Application, private val repository: Repository, private val dispatcher: CoroutineDispatcher): AndroidViewModel(application){
 
+    enum class UiState{
+        Error,
+        Success
+    }
+    private val _uiState = MutableLiveData<UiState>()
+    val uiState: LiveData<UiState> = _uiState
+
     fun getUsuario(id: Long): LiveData<Usuario> = repository.getUsuarioId(id)
 
-    fun atualizarSenha (id: Long, senha: String) = viewModelScope.launch {
-        repository.updateSenha(id, senha)
+    fun atualizarSenha (id: Long, senhaAtual: String, senhaNova: String) = viewModelScope.launch(Dispatchers.IO) {
+        val usuario = repository.getUsuarioById(id)
+        if (senhaAtual == usuario.senha) {
+            repository.updateSenha(id, senhaNova)
+            _uiState.postValue(UiState.Success)
+        } else {
+            _uiState.postValue(UiState.Error)
+        }
     }
 
     fun senhavalida (senhaAntiga: EditText, senhaNova: EditText, senhaUsuario: String): Int {

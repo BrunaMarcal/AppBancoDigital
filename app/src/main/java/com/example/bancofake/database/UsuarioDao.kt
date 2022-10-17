@@ -17,4 +17,7 @@ interface UsuarioDao {
 
     @Query("UPDATE usuario SET senha = :senha WHERE id = :id")
     fun updateSenha (id: Long, senha: String)
+
+    @Query("SELECT * FROM usuario WHERE id = :id")
+    fun selecionarById(id: Long): Usuario
 }
